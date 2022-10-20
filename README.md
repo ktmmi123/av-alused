@@ -14,6 +14,27 @@ loetelu
 
 ## kood
 
+sudo apt-get update # uuendab paketinimekirjad
+sudo apt-get upgrade # 
+
+control + z - pausile
+fg - toob tagasi esiplaanile
+bg - viib taustale
+kill %% 
+control + c - katkestab 
+
+ssh võtmed ja nende kasutamine 
+- Webhosting 
+- Github 
+
+
+
+sudo apt-get update
+sudo apt-get install netcat-openbsd tcpdump traceroute mtr iputils-ping lsof
+
+
+printf 'HEAD / HTTP/1.1\r\nHost: mail.tptlive.ee\r\n\r\n\r\n' | nc mail.tptlive.ee 80
+HTTP/1.1 301 Moved Permanently
 Date: Thu, 20 Oct 2022 12:00:39 GMT
 Server: Apache/2.4.38 (Debian)
 Location: https://mail.tptlive.ee/
