@@ -29,6 +29,7 @@ ssh võtmed ja nende kasutamine
 
 
 
+
 sudo apt-get update
 sudo apt-get install netcat-openbsd tcpdump traceroute mtr iputils-ping lsof
 
@@ -47,3 +48,6 @@ Age: 0
 Via: 1.1 varnish (Varnish/5.2)
 X-Cache: MISS
 Connection: keep-alive
+
+
+PKI   X.509
