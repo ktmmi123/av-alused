@@ -27,9 +27,9 @@ ssh võtmed ja nende kasutamine
 - Webhosting 
 - Github 
 
-
-ip addr show eth0
 ```
+##ip addr show eth0
+
 10: eth0@if11: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default
     link/ether 02:42:ac:11:00:04 brd ff:ff:ff:ff:ff:ff link-netnsid 0
     inet 172.17.0.4/16 brd 172.17.255.255 scope global eth0
@@ -38,17 +38,20 @@ ip addr show eth0
        
        
  ip route show
+```
 default via 172.17.0.1 dev eth0
 172.17.0.0/16 dev eth0 proto kernel scope link src 172.17.0.4
 172.18.0.0/16 dev docker0 proto kernel scope link src 172.18.0.1 linkdown
+```
 
-
-
+```
 ping -c3 8.8.8.8
+
 PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
 64 bytes from 8.8.8.8: icmp_seq=1 ttl=114 time=2.55 ms
 64 bytes from 8.8.8.8: icmp_seq=2 ttl=114 time=0.764 ms
 64 bytes from 8.8.8.8: icmp_seq=3 ttl=114 time=1.07 ms
+```
 
 computer has internet access
 computer at 8.8.8.8 is up and running
