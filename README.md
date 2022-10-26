@@ -29,10 +29,12 @@ ssh võtmed ja nende kasutamine
 
 
 ip addr show eth0
+```
 10: eth0@if11: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default
     link/ether 02:42:ac:11:00:04 brd ff:ff:ff:ff:ff:ff link-netnsid 0
     inet 172.17.0.4/16 brd 172.17.255.255 scope global eth0
        valid_lft forever preferred_lft forever
+```
        
        
  ip route show
@@ -118,7 +120,7 @@ http server port 80
 
 
 printf 'HEAD / HTTP/1.1\r\nHost: en.wikipedia.org\r\n\r\n' | nc en.wikipedia.org 80
-'''
+
 HTTP/1.1 301 TLS Redirect
 Date: Wed, 26 Oct 2022 11:18:20 GMT
 Server: Varnish
@@ -134,7 +136,7 @@ X-Client-IP: 34.147.86.14
 Location: https://en.wikipedia.org/
 Content-Length: 0
 Connection: keep-alive
-'''
+
 
 output of printf used as an input to nc through pipe, nc takes that input and sends it to the port that it is told and displays the outcome.
 
