@@ -28,7 +28,7 @@ ssh võtmed ja nende kasutamine
 - Github 
 
 
-##ip addr show eth0
+## ip addr show eth0
 ```
 10: eth0@if11: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default
     link/ether 02:42:ac:11:00:04 brd ff:ff:ff:ff:ff:ff link-netnsid 0
@@ -37,7 +37,7 @@ ssh võtmed ja nende kasutamine
 ```
        
        
-##ip route show
+## ip route show
 ```
 default via 172.17.0.1 dev eth0
 172.17.0.0/16 dev eth0 proto kernel scope link src 172.17.0.4
@@ -45,7 +45,7 @@ default via 172.17.0.1 dev eth0
 ```
 
 
-##ping -c3 8.8.8.8
+## ping -c3 8.8.8.8
 ```
 PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
 64 bytes from 8.8.8.8: icmp_seq=1 ttl=114 time=2.55 ms
@@ -63,7 +63,7 @@ rtt min/avg/max/mdev = 0.764/1.459/2.545/0.777 ms
 - isp knows how to send traffic towards google
 
 
-##host -t aaaa google.com
+## host -t aaaa google.com
 ```
 google.com has IPv6 address 2a00:1450:4013:c1a::64
 google.com has IPv6 address 2a00:1450:4013:c1a::65
@@ -73,7 +73,7 @@ google.com has IPv6 address 2a00:1450:4013:c1a::8b
 
 
 
-##host -t mx udacity.com
+## host -t mx udacity.com
 ```
 udacity.com mail is handled by 10 aspmx.l.google.com.
 udacity.com mail is handled by 20 alt1.aspmx.l.google.com.
@@ -82,13 +82,13 @@ udacity.com mail is handled by 30 alt3.aspmx.l.google.com.
 udacity.com mail is handled by 30 alt4.aspmx.l.google.com.
 ```
 
-##tcpdump -n -c5 -i eth0 port22
+## tcpdump -n -c5 -i eth0 port22
 ```
 tcpdump: eth0: You don't have permission to capture on that device
 (socket: Operation not permitted)
 ```
 
-##traceroute www.udacity.com
+## traceroute www.udacity.com
 ```
 traceroute to www.udacity.com (104.18.41.189), 30 hops max, 60 byte packets
  1  172.17.0.1 (172.17.0.1)  0.034 ms  0.009 ms  0.007 ms
@@ -106,7 +106,7 @@ Keys:  Help   Display mode   Restart statistics   Order of fields   quit
  3. 172.64.146.67                                                                                                                                                 0.0%    43    4.6   4.7   4.3   6.0   0.3
 ```
 
-##printf 'HEAD / HTTP/1.1\r\nHost: www.udacity.com\r\n\r\n' | nc www.udacity.com 80
+## printf 'HEAD / HTTP/1.1\r\nHost: www.udacity.com\r\n\r\n' | nc www.udacity.com 80
 ```
 HTTP/1.1 301 Moved Permanently
 Date: Wed, 26 Oct 2022 10:59:03 GMT
@@ -125,7 +125,7 @@ ssh server port 22
 http server port 80
 
 
-##printf 'HEAD / HTTP/1.1\r\nHost: en.wikipedia.org\r\n\r\n' | nc en.wikipedia.org 80
+## printf 'HEAD / HTTP/1.1\r\nHost: en.wikipedia.org\r\n\r\n' | nc en.wikipedia.org 80
 ```
 HTTP/1.1 301 TLS Redirect
 Date: Wed, 26 Oct 2022 11:18:20 GMT
@@ -150,7 +150,7 @@ nc -n [IP address] port (-n only number or ip address)
 nc -v example.com 80
 
 
-##printf 'HEAD / HTTP/1.1\r\nHost: www.google.com\r\n\r\n' | nc www.google.com 80
+## printf 'HEAD / HTTP/1.1\r\nHost: www.google.com\r\n\r\n' | nc www.google.com 80
 ```
 HTTP/1.1 200 OK
 Content-Type: text/html; charset=ISO-8859-1
@@ -164,7 +164,7 @@ Cache-Control: private
 Set-Cookie: AEC=AakniGOc2-6__NQYKVtz_lTCvM2GlfE8OLCn3kR0lSz_Zl7BrfVugYj_e-A; expires=Mon, 24-Apr-2023 12:20:47 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=lax
 ```
 
-##Google uses server gws
+## Google uses server gws
 
 
 layer-application  --  protocols-http, ssh  --  concepts-URLs, password, webpages, server headers
