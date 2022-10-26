@@ -167,41 +167,27 @@ Set-Cookie: AEC=AakniGOc2-6__NQYKVtz_lTCvM2GlfE8OLCn3kR0lSz_Zl7BrfVugYj_e-A; exp
 ## Google uses server gws
 
 
-layer-application  --  protocols-http, ssh  --  concepts-URLs, password, webpages, server headers
-layer-transport  --  protocols-tcp, udp  --  concepts-port numbers, sessions
-layer-internet  --  protocols-IP  --  concepts-IP addresses, routes
-layer-hardware  --  protocols-wifi, ethernet, DSL  --  concepts-signal strength, access points
+- layer-application  --  protocols-http, ssh  --  concepts-URLs, password, webpages, server headers
+- layer-transport  --  protocols-tcp, udp  --  concepts-port numbers, sessions
+- layer-internet  --  protocols-IP  --  concepts-IP addresses, routes
+- layer-hardware  --  protocols-wifi, ethernet, DSL  --  concepts-signal strength, access points
 
-I opened two different terminals, into the first one I wrote nc -l 3456
+## communication between terminals
+I opened two different terminals, into the first one I wrote
+```
+nc -l 3456
+```
 and into the second one I wrote:
+```
 nc localhost 3456
+```
 
 this allowed me to write messages between two terminals, the first terminal was listening to the second one.
 CTRL+C ended the listening.
 
+
+## port numbers
 highest port number 65 535
 lowest port number 1023
 0-1023 reserved for superuser
 
-
-sudo apt-get update
-sudo apt-get install netcat-openbsd tcpdump traceroute mtr iputils-ping lsof
-
-
-printf 'HEAD / HTTP/1.1\r\nHost: mail.tptlive.ee\r\n\r\n\r\n' | nc mail.tptlive.ee 80
-HTTP/1.1 301 Moved Permanently
-Date: Thu, 20 Oct 2022 12:00:39 GMT
-Server: Apache/2.4.38 (Debian)
-Location: https://mail.tptlive.ee/
-Cache-Control: max-age=0
-Expires: Thu, 20 Oct 2022 12:00:39 GMT
-Content-Type: text/html; charset=iso-8859-1
-Vary: Accept-Encoding
-X-Varnish: 548897561
-Age: 0
-Via: 1.1 varnish (Varnish/5.2)
-X-Cache: MISS
-Connection: keep-alive
-
-
-PKI   X.509
