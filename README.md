@@ -179,3 +179,14 @@ highest port number 65 535
 lowest port number 1023
 0-1023 reserved for superuser
 
+## sudo lsof -i
+```
+COMMAND     PID             USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+sshd         71             root    3u  IPv4  34960      0t0  TCP *:ssh (LISTEN)
+sshd         71             root    4u  IPv6  34962      0t0  TCP *:ssh (LISTEN)
+theia-pro   330             root    6u  IPv6  34548      0t0  TCP *:970 (LISTEN)
+
+```
+
+
+
