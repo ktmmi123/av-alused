@@ -118,6 +118,7 @@ http server port 80
 
 
 printf 'HEAD / HTTP/1.1\r\nHost: en.wikipedia.org\r\n\r\n' | nc en.wikipedia.org 80
+'''
 HTTP/1.1 301 TLS Redirect
 Date: Wed, 26 Oct 2022 11:18:20 GMT
 Server: Varnish
@@ -133,6 +134,7 @@ X-Client-IP: 34.147.86.14
 Location: https://en.wikipedia.org/
 Content-Length: 0
 Connection: keep-alive
+'''
 
 output of printf used as an input to nc through pipe, nc takes that input and sends it to the port that it is told and displays the outcome.
 
@@ -166,6 +168,10 @@ nc localhost 3456
 
 this allowed me to write messages between two terminals, the first terminal was listening to the second one.
 CTRL+C ended the listening.
+
+highest port number 65 535
+lowest port number 1023
+0-1023 reserved for superuser
 
 
 sudo apt-get update
