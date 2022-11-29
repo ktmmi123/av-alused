@@ -188,5 +188,31 @@ theia-pro   330             root    6u  IPv6  34548      0t0  TCP *:970 (LISTEN)
 
 ```
 
+## 
+```
+ping -c 7 yahoo.com
+-c 7 will send 7 pings and then exit
+
+host -t a voog.com shows google's ip address
+dig www.voog.com shows pretty much same info but in a form readable for scripts and closer to a way it's stored in a DNS server's configuration files.
+
+```
+
+```
+CNAME - canonical name
+AAAA - IPv6 address
+NS - DNS name server
+
+```
+
+```
+IPv4 
+216.58.203.121
+0-255, each is one byte-8bits
+```
+
+
+
+
 
 
