@@ -261,8 +261,10 @@ ipv6 is the next generation
 
 none of my devices have ipv6
 
+```
 What is a flag?
 In low-level computer languages, a flag is a Boolean value — a true or false value — that is stored in memory as a single bit. If a flag bit is 1, we say the flag is set. If the flag bit is 0, the flag is cleared (or unset).
+```
 
 * SYN (synchronize) [S] — This packet is opening a new TCP session and contains a new initial sequence number.
 * FIN (finish) [F] — This packet is used to close a TCP session normally. The sender is saying that they are finished sending, but they can still receive   data from the other endpoint.
@@ -271,9 +273,10 @@ In low-level computer languages, a flag is a Boolean value — a true or false v
 * ACK (acknowledge) [.] — This packet acknowledges that its sender has received data from the other endpoint. Almost every packet except the first SYN       will have the ACK flag set.
 * URG (urgent) [U] — This packet contains data that needs to be delivered to the application out-of-order. Not used in HTTP or most other current           applications.
 
+```
 tcp congestion control, so everything doesn't jam up.
 (Screenshot-tcpcongestion)
-
+```
 
 
 
