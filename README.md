@@ -211,6 +211,72 @@ IPv4
 0-255, each is one byte-8bits
 ```
 
+```
+how many ipv4 addresses are there?
+over 4 billion
+
+```
+
+/24 netblock:
+225.225.225.0
+
+/16 netblock
+225.225.0.0
+
+decimal subnet mask /14 like stanford
+255.252.0.0
+around 250 000 addresses on that network
+
+
+ip addr show
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
+    link/ether 02:42:f0:ed:37:80 brd ff:ff:ff:ff:ff:ff
+    inet 172.18.0.1/16 brd 172.18.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+10: eth0@if11: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default
+    link/ether 02:42:ac:11:00:04 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet 172.17.0.4/16 brd 172.17.255.255 scope global eth0
+       valid_lft forever preferred_lft forever
+
+loopback almost always 127.0.0.1 allows programs to use the network stack to talk to other programs on the same host
+
+ip route show default
+default via 172.17.0.1 dev eth0
+ping time less than 0.1 ms
+
+my public ipv4 82.131.29.235
+
+my private ipv found under system prefrences - network
+
+ipv4 - 32 bit address length
+ipv6 - 128 bit address length
+
+ipv4 does not produce enought addresses for the worlds population
+ipv6 is the next generation
+(ipv5 was a failed experiment)
+
+none of my devices have ipv6
+
+What is a flag?
+In low-level computer languages, a flag is a Boolean value — a true or false value — that is stored in memory as a single bit. If a flag bit is 1, we say the flag is set. If the flag bit is 0, the flag is cleared (or unset).
+
+* SYN (synchronize) [S] — This packet is opening a new TCP session and contains a new initial sequence number.
+* FIN (finish) [F] — This packet is used to close a TCP session normally. The sender is saying that they are finished sending, but they can still receive   data from the other endpoint.
+* PSH (push) [P] — This packet is the end of a chunk of application data, such as an HTTP request.
+* RST (reset) [R] — This packet is a TCP error message; the sender has a problem and wants to reset (abandon) the session.
+* ACK (acknowledge) [.] — This packet acknowledges that its sender has received data from the other endpoint. Almost every packet except the first SYN       will have the ACK flag set.
+* URG (urgent) [U] — This packet contains data that needs to be delivered to the application out-of-order. Not used in HTTP or most other current           applications.
+
+tcp congestion control, so everything doesn't jam up.
+(Screenshot-tcpcongestion)
+
+
+
+
 
 
 
