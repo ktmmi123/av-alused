@@ -248,18 +248,21 @@ ip route show default
 default via 172.17.0.1 dev eth0
 ping time less than 0.1 ms
 
-my public ipv4 82.131.29.235
+* my public ipv4 82.131.29.235
 
-my private ipv found under system prefrences - network
+* my private ipv found under system prefrences - network
 
+```
 ipv4 - 32 bit address length
 ipv6 - 128 bit address length
 
-ipv4 does not produce enought addresses for the worlds population
-ipv6 is the next generation
-(ipv5 was a failed experiment)
+```
 
-none of my devices have ipv6
+- ipv4 does not produce enought addresses for the worlds population
+- ipv6 is the next generation
+- (ipv5 was a failed experiment)
+
+* none of my devices have ipv6
 
 ```
 What is a flag?
