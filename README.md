@@ -279,8 +279,62 @@ In low-level computer languages, a flag is a Boolean value — a true or false v
 ```
 tcp congestion control, so everything doesn't jam up.
 (Screenshot-tcpcongestion)
-```
+````
 
+
+```
+traceroute + adress to see the route it took
+or "mtr"
+
+´´´
+
+high latency - laggy
+
+```
+bandwitdh and latency - added pictures
+´´´
+
+besides retransmitting dropped packets, what does tcp need to do to make sure everyone gets to talk to the moon without too much congestion?
+- when packets are dropped, send more slowly.
+
+```
+Firewalls are devices that network operators can use to filter traffic that's coming into or leaving their network. A firewall is one example of a class of network devices called middleboxes — devices that inspect, modify, or filter network traffic. Other examples of middleboxes include intrusion detection systems and load balancers. Technically, it's only a middle-box if it's a separate device from the client or server — server-side "firewalls" like Linux iptables aren't middleboxes.
+
+´´´
+
+A firewall can be a real boon to an organization's network security. The most common configuration for a firewall is to drop any incoming traffic except traffic to (host, port) pairs that are supposed to be receiving connections from the Internet. This lets the network administrator be sure that other machines on the network — like backend databases or administrative systems — aren’t going to get direct attacks from outside.
+
+But firewalls can cause trouble for application developers. If you're trying to test or deploy a network app and there's a firewall between your server and the user, that firewall can potentially interfere with your app or block it completely. In order to deploy an application on a particular server and port, it helps to know what kind of firewall might be between you and your user. One of the reasons that many non-Web applications use HTTP as a transport is that HTTP is often unblocked at firewalls even when other ports are blocked.
+
+Aside from blocking traffic outright, middleboxes can also alter traffic, for instance replacing web pages with error messages. This is often done for social or political purposes. For instance, in the U.S., many schools use traffic filters of various sorts to prevent students from accessing web sites deemed inappropriate for children. But what sites get counted as "inappropriate" can reflect the biases or opinions of the people who wrote or configured the filter.
+
+And people who program these things can always make mistakes, too. For instance, there's a whole class of bugs that arise from filters that try to block rude words, but end up blocking or replacing innocuous words that contain a rude word as a substring.
+
+Rather famously, some countries have deployed large-scale firewalls or filters to censor their citizens' access to the global Internet. Major well-known sites such as YouTube and Twitter are sometimes blocked entirely in some countries. That can happen to your site, too — just something to keep in mind.
+
+```
+some users cant access site, what should you investigate?
+* can the user ping your site by IP address
+* can the user access different domain on the same server
+* can they look up your servers name using "host" or "dig"
+* are all the users with the same problem in the same country
+
+´´´
+
+------------------------------
+```
+Middleboxes 2: Proxies & NAT
+´´´
+Earlier in this course, you learned about the IPv4 address shortage; and the deployment of Network Address Translation, or NAT, as a workaround for it. With NAT, several devices can access Internet resources through a single public IP address, with the NAT device using port numbers to match up connections on the inside and outside.
+
+For end-users, NAT devices overlap with firewalls. Typical home routers can act as both a NAT and a simple firewall, often having the ability to block or filter at a very basic level. At a larger scale, ISPs and other organizations have deployed NAT devices for their whole customer networks, called carrier-grade NAT. This is very common for mobile networks, and also for ISPs in the developing world, where there never were anywhere near enough addresses allocated for the number of users.
+
+Usually we imagine an end-user computer as having only one person using it at a time. After all, there's generally only one mouse and keyboard. Two people typing on the same keyboard at the same time doesn't generally happen outside of poorly thought-out TV shows. But in the case of NAT, your web site can see requests from the same IP address that actually come from different users on different computers.
+
+Another way that can happen is through the use of web proxies. Whereas a NAT works at the IP level, rewriting packets, a web proxy works at the HTTP level, taking queries from browsers and sending them out to web servers. Many organizations use web proxies for caching, including some ISPs. From the standpoint of a web developer or site operator, traffic from a busy proxy looks much the same as traffic from a busy NAT: queries for many users, on many actual computers, are funneled through a single public IP address.
+
+```
+how could a web app distinguish users who are behind the same public IP address? - logged-in usewr identity and session cookies.
 
 
 
